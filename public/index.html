@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction Tracker</h1>
+        <form id="transaction-form">
+            <input type="text" id="title" placeholder="Transaction Title" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <input type="text" id="category" placeholder="Category" required>
+            
+            <div class="radio-group">
+                <label><input type="radio" name="type" value="expense" required> Expense</label>
+                <label><input type="radio" name="type" value="income" required> Income</label>
+            </div>
+
+            <button type="submit">Add Transaction</button>
+        </form>
+        <h2>Transactions</h2>
+        <div class="transactions">
+            <div class="column">
+                <h3>Expenses</h3>
+                <ul id="expense-list"></ul>
+            </div>
+            <div class="column">
+                <h3>Income</h3>
+                <ul id="income-list"></ul>
+            </div>
+        </div>
+        <h2>Total Balance: ₹<span id="total-balance">0</span></h2>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
